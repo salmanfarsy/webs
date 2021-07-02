@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/salmanfarsy/webs/issues"
   },
-  "homepage": "https://github.com/salmanfarsy/webs#readme"
+  "homepage": "https://github.com/salmanfarsy/webs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

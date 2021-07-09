@@ -1,10 +1,13 @@
 //packages
 const express = require('express');
 const app = express();
-
+//express config
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
+app.use(express.urlencoded({extended : true}));
 //routes
 app.get('/', (req, res)=>{
-    res.send('hello to my new portfolio site')
+    res.render('home')
 })
 
 

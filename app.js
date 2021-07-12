@@ -13,5 +13,5 @@ app.get('/', (req, res)=>{
 
 //port
 app.listen(3000, ()=>{
-    'server On'
+   console.log('server On')
 })

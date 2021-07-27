@@ -11,13 +11,25 @@ header img{
 header{
     display: flex;
     justify-content: space-between;
-    padding: 0 3%;
+    align-items: center;
+    padding: 1%;
+    background: linear-gradient(hsl(240, 100%, 70%), hsl(240, 100%, 60%));
+    color: white;
 }
 .logo{
     display: flex;
     align-items: center;
 }
-ul{
+nav ul{
     list-style: none;
     display: flex;
+}
+nav a{
+    padding: 0 10px;
+    text-decoration: none;
+    color: rgb(173, 173, 173);
+}
+nav a:hover{
+ border-bottom: 1px white solid;
+ color: white;
 }

@@ -1,0 +1,8 @@
+.cover{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cover img{
+    width: 30vw;
+}

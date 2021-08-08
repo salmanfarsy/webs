@@ -2,7 +2,15 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 0 10%;
+    font-size: 1.1rem;
 }
 .cover img{
     width: 30vw;
+}
+.cover .text{
+    padding: 50px;
+}
+.cover p{
+    line-height: 30px;
 }

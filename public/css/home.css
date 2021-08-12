@@ -19,7 +19,7 @@
     --btn-hover:white;
     text-decoration: none;
     color: var(--btn-clr);
-    border: 1px solid var(--btn-clr);
+    border: 2px solid var(--btn-clr);
     border-radius: 15px;
     display: inline-block;
     padding: 5px;
@@ -27,4 +27,7 @@
 .cover a:hover{
 background-color:var(--btn-clr);
 color: var(--btn-hover) ;
+}
+.cover .project{
+    --btn-clr:rgb(10, 141, 218);
 }

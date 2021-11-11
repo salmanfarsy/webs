@@ -27,6 +27,6 @@ app.use('/api', userRoute);
 app.use('/api', reviewRoute);
 //port
 
-app.listen(process.env.PORT, ()=>{
+app.listen(5000 || process.env.PORT, ()=>{
     console.log('your server is on')
 })

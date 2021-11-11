@@ -1,6 +1,6 @@
 //modules
 const express = require('express'),
-app = express()
+app = express(),
 dotenv = require('dotenv'),
 cors = require('cors'),
 carsRoute = require('./routes/carsRoute'),
@@ -27,6 +27,6 @@ app.use('/api', userRoute);
 app.use('/api', reviewRoute);
 //port
 
-app.listen(5000 || process.env.PORT, ()=>{
+app.listen(process.env.PORT, ()=>{
     console.log('your server is on')
 })

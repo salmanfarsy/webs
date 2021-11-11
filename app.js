@@ -1,17 +1,32 @@
-//packages
-const express = require('express');
-const app = express();
-//express config
-app.set('view engine', 'ejs');
-app.use(express.static('public'));
-app.use(express.urlencoded({extended : true}));
+//modules
+const express = require('express'),
+app = express()
+dotenv = require('dotenv'),
+cors = require('cors'),
+carsRoute = require('./routes/carsRoute'),
+orderRoute = require('./routes/orderRoute'),
+userRoute = require('./routes/userRoute'),
+reviewRoute = require('./routes/reviewRoute'),
+mongoose = require('mongoose');
+//config
+dotenv.config()
+app.use(express.json());
+app.use(cors());
+//mongoose
+mongoose.connect(process.env.MONGO_URL).then(()=> console.log('database connected')).catch((error)=> console.log('not Connected'))
+
+
+
 //routes
 app.get('/', (req, res)=>{
-    res.render('home' , {title:'Home'})
+    res.json('Hello this Server is Running')
 })
-
-
+app.use('/api', carsRoute);
+app.use('/api', orderRoute);
+app.use('/api', userRoute);
+app.use('/api', reviewRoute);
 //port
-app.listen(3000, ()=>{
-   console.log('server On')
+
+app.listen(5000, ()=>{
+    console.log('your server is on')
 })

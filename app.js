@@ -8,13 +8,13 @@ orderRoute = require('./routes/orderRoute'),
 userRoute = require('./routes/userRoute'),
 reviewRoute = require('./routes/reviewRoute'),
 mongoose = require('mongoose');
+
+//mongoose
+mongoose.connect(process.env.MONGO_URL).then(()=> console.log('database connected')).catch((error)=> console.log('not Connected'))
 //config
 dotenv.config()
 app.use(express.json());
 app.use(cors());
-//mongoose
-mongoose.connect(process.env.MONGO_URL).then(()=> console.log('database connected')).catch((error)=> console.log('not Connected'))
-
 
 
 //routes
